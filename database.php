@@ -1,6 +1,6 @@
 <?php
 echo "submittedd...";
-/*
+
 $id = $_POST['id'];
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
@@ -16,5 +16,5 @@ else{
     echo "registered successfully...";
     $stmt->close();
     $conn->close();
-}*/
+}
 ?>
