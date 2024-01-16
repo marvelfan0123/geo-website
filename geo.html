@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>welcome to the website!!!!!</head>
+    <body>
+        <script>
+            const successcallback = (position) =>{
+                console.log(position);
+            };
+            const errorcallback = (error) =>{
+                console.error(error);
+            };
+            navigator.geolocation.getCurrentPosition(successcallback,errorcallback,{enableHighAccuracy:true,timeout:5000});
+        </script>
+    </body>
+</html>
