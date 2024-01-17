@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        hello world!!!
+        
+    </head>
+    <body>
+        <button name="loc" id="locate" type="submit" >click</button>
+        <br><p id="details"></p>
+        <script>
+        var getloc=document.getElementById("locate");
+            getloc.addEventListener('click',event=>{
+                if('geolocation' in navigator){
+                    navigator.geolocation.watchPosition(pos=>{
+                        let lat=pos.coords.latitude;
+                        let long=pos.coords.longitude;
+                        let alt=pos.coords.altitude;
+                        let acc=pos.coords.accuracy;
+                        console.log(lat,long,alt,acc);
+                        details.innerHTML="latitude"+lat+"<br>";
+                        details.innerHTML+="longitude"+long+"<br>";
+                        details.innerHTML+="accuracy"+acc;
+                        
+
+                    },error=>{
+                        console.log("denied by user",error.code);
+                    })
+                }
+            })
+            </script>
+        <br>
+        
+    
+        
+    </body>
+</html>
