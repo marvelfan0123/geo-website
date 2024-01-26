@@ -1,3 +1,3 @@
 <?php
-echo "Submitted...:
+echo "Submitted...;
 ?>
